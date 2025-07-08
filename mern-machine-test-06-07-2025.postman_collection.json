@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "9517939c-a34c-4397-a618-0e051a680ad8",
+		"name": "mern-machine-test-06-07-2025",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24503405"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Game Blogger\",\r\n    \"email\": \"author.game@yopmail.com\",\r\n    \"password\": \"Sinjan@1234\",\r\n    \"role\": \"author\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sinjan.admin@yopmail.com\",\r\n    \"password\": \"Sinjan@1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User List by Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/users/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blogs",
+			"item": [
+				{
+					"name": "Create new blog",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Why Limited Series Are Dominating Streaming Platforms\",\r\n  \"content\": \"In the age of binge-watching, limited series have emerged as the preferred format for many viewers. Unlike long-running shows, these series deliver tight, compelling narratives without filler episodes or drawn-out arcs.\\n\\nWhat is a Limited Series?\\nA limited series typically runs for 4–10 episodes with a clear beginning, middle, and end. They are self-contained and often adapt novels or historical events.\\n\\nPopular Examples:\\n- *Chernobyl* (HBO) – A haunting retelling of the nuclear disaster.\\n- *The Queen’s Gambit* (Netflix) – A brilliant mix of chess, addiction, and identity.\\n- *Beef* (Netflix) – A wild emotional rollercoaster rooted in road rage.\\n\\nWhy They Work:\\n- No time commitment like multi-season dramas\\n- Higher production quality per episode\\n- Stronger storytelling focus\\n\\nConclusion:\\nLimited series combine the depth of television with the focus of a feature film. For modern audiences with limited time and high expectations, this format is hitting the sweet spot.\",\r\n  \"tags\": [\"Streaming\", \"TVShows\", \"LimitedSeries\", \"Netflix\", \"Entertainment\"],\r\n  \"isPublished\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/blogs/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blogs",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get blogs by author - Only author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/blogs/author-blogs",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blogs",
+								"author-blogs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update blog",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"How Mobile Gaming is Redefining the Industry in 2025\",\r\n  \"content\": \"Once considered a casual time-pass, mobile gaming has matured into a multi-billion-dollar industry that rivals console and PC gaming in reach and revenue.\\n\\nWhy Mobile Gaming is Winning:\\n1. **Accessibility** – With smartphones in nearly every pocket, games are instantly available to a massive audience.\\n2. **Diverse Genres** – From hyper-casual puzzle games to competitive battle royales, mobile platforms offer something for everyone.\\n3. **Cross-Platform Play** – Games like *Call of Duty: Mobile* and *Genshin Impact* allow players to compete across devices.\\n4. **Cloud Gaming** – Services like Xbox Cloud Gaming and NVIDIA GeForce NOW are bringing AAA titles to mobile without high-end hardware.\\n\\nMonetization Trends:\\nThe rise of microtransactions, battle passes, and ad-supported free-to-play models has changed how games are built and sustained.\\n\\nLooking Ahead:\\nExpect deeper stories, better graphics via Unreal Engine 5 mobile support, and more controller-friendly experiences. Indie developers are also tapping into mobile-first innovation with unique, story-rich titles.\\n\\nConclusion:\\nMobile gaming is no longer a secondary platform—it's a central force shaping the future of interactive entertainment.\",\r\n  \"tags\": [\"MobileGaming\", \"GameIndustry\", \"CloudGaming\", \"2025\", \"Entertainment\"],\r\n  \"isPublished\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/blogs/update/686cdae363b98b57695bba93",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blogs",
+								"update",
+								"686cdae363b98b57695bba93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update publish status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isPublished\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/blogs/publish-status/update/686cda7463b98b57695bba86",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blogs",
+								"publish-status",
+								"update",
+								"686cda7463b98b57695bba86"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blog",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/blogs/delete/686cda7c63b98b57695bba89",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blogs",
+								"delete",
+								"686cda7c63b98b57695bba89"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all blogs - readers only",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/blogs/all?tags=&author&search=&items_per_page=5&page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blogs",
+								"all"
+							],
+							"query": [
+								{
+									"key": "tags",
+									"value": ""
+								},
+								{
+									"key": "author",
+									"value": null
+								},
+								{
+									"key": "search",
+									"value": ""
+								},
+								{
+									"key": "items_per_page",
+									"value": "5"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Analytics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/blogs/analytics",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"blogs",
+								"analytics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5555/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
